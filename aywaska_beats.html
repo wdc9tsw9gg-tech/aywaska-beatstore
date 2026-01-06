@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AYWASKA BEATS</title>
+  <meta name="description" content="Type Beat Producer Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --card: #14141b;
+      --text: #eaeaf0;
+      --muted: #9a9aa8;
+      --accent: #6cf2c2;
+      --border: #242433;
+      --green: #6cf2c2;
+    }
+    * { box-sizing: border-box; transition: all 0.3s ease; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
+    header {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 40px 0 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-container { display: flex; align-items: flex-start; gap: 14px; }
+    .logo-container img { width: 120px; height: 120px; border-radius: 12px; border: 1px solid var(--border); object-fit: cover; transition: transform 0.3s ease; margin-top: -10px; }
+    .logo-container img:hover { transform: scale(1.05); }
+    .hero { display: flex; flex-direction: column; gap: 18px; margin-left: 16px; align-items: flex-start; }
+    h1 { font-size: clamp(28px, 5vw, 56px); line-height: 1.05; margin: 0; text-align: left; }
+    .accent { color: var(--accent); }
+    .subtitle { color: var(--muted); max-width: 720px; text-align: left; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; justify-content: flex-start; }
+    .btn {
+      padding: 14px 18px; border-radius: 14px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, #1a1a2a, #111118);
+      font-weight: 600; letter-spacing: 0.2px;
+      cursor: pointer;
+    }
+    .btn:hover { transform: scale(1.05); box-shadow: 0 0 8px var(--green); }
+    .btn.primary { background: linear-gradient(180deg, var(--green), #4fd1a1); color: #0b0b0f; border: none; }
+
+    section { margin-top: 48px; text-align: left; }
+    .grid { display: grid; gap: 16px; }
+    .grid.cols-3 { grid-template-columns: repeat(3, 1fr); justify-content: center; }
+    .card {
+      background: linear-gradient(180deg, #161622, #12121a);
+      border: 1px solid var(--border);
+      border-radius: 18px; padding: 18px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover { transform: scale(1.03); box-shadow: 0 0 12px var(--green); }
+    .card h3 { margin: 0 0 6px; color: var(--green); font-size: 1.3rem; }
+    .muted { color: var(--muted); }
+
+    .beat-player { display: grid; gap: 10px; }
+    .beat-row {
+      background: linear-gradient(180deg, #161622, #12121a);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 14px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .beat-row:hover { transform: scale(1.02); box-shadow: 0 0 8px var(--green); }
+    .beat-title { font-weight: 600; margin-bottom: 6px; }
+    audio { width: 100%; }
+
+    .youtube-gallery { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-top: 16px; justify-items: start; }
+    .youtube-video { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .youtube-video iframe { width: 100%; height: 150px; }
+
+    .discount-card {
+      background: linear-gradient(180deg, #161622, #12121a);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-top: 16px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--green);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .discount-card:hover { transform: scale(1.02); box-shadow: 0 0 8px var(--green); }
+
+    footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--muted); display: flex; justify-content: flex-start; gap: 12px; flex-wrap: wrap; }
+
+    .contact-link { display: flex; align-items: center; gap: 6px; justify-content: flex-start; }
+    .contact-link img { width: 18px; height: 18px; object-fit: contain; }
+
+    @media (max-width: 900px) { header { flex-direction: column; align-items: flex-start; } .hero { margin-left: 0; } .grid.cols-3 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="aywaska-logo.jpg" alt="Producer Logo" />
+        <div class="hero">
+          <h1> GO WE GAZ — <span class="accent">MEMPHIS / TRAP Beats</span></h1>
+          <p class="subtitle">I create high-quality type beats for independent artists. Lease or exclusive deals. Fast delivery. Est.2020</p>
+          <div class="cta">
+            <a class="btn primary" href="https://www.instagram.com/gvmpard" target="_blank">DM for purchase</a>
+            <a class="btn primary" href="mailto:beatsmolotov@gmail.com">Email me</a>
+            <a class="btn" href="#beats">Listen</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="beats" class="beats">
+      <h2>Latest Beats</h2>
+      <p class="muted">Private MP3 previews</p>
+      <div class="beat-player">
+        <div class="beat-row">
+          <div class="beat-title">Lets Love 160 F#m – Memphis beat</div>
+          <audio controls>
+           <source src="beats/lets-love-160-fsharp.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <div class="beat-row">
+          <div class="beat-title">Gray 82 C#m – Trap beat</div>
+          <audio controls>
+            <source src="beats/gray-82-csharpm.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </section>
+
+    <section id="youtube">
+      <h2>My YouTube Channel</h2>
+      <div class="cta" style="margin-bottom:16px; justify-content: flex-start;">
+        <a class="btn primary" href="https://www.youtube.com/@aywaskabeats2" target="_blank">Subscribe and get FREE MP3 beat</a>
+      </div>
+      <div class="youtube-gallery">
+        <div class="youtube-video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="youtube-video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="youtube-video">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <div class="grid cols-3" style="justify-content: center;">
+        <div class="card">
+          <h3>MP3 Lease</h3>
+          <p class="muted">Non‑profit / demo use</p>
+          <p><strong style="font-size:1.3rem;">$25</strong></p>
+        </div>
+        <div class="card">
+          <h3>WAV Lease</h3>
+          <p class="muted">Streaming & monetization</p>
+          <p><strong style="font-size:1.3rem;">$45</strong></p>
+        </div>
+        <div class="card">
+          <h3>Exclusive</h3>
+          <p class="muted">Full rights / one buyer</p>
+          <p><strong style="font-size:1.3rem;">From $150</strong></p>
+        </div>
+      </div>
+      <div class="discount-card" style="text-align: center;">
+        <a href="https://www.instagram.com/gvmpard" target="_blank" style="color: var(--green); text-decoration: none;"><p style="margin:0;">Buy 1 beat, get 1 free! 🎁</p></a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">DM me on Instagram, Telegram, or email for beat purchase</p>
+        <p class="contact-link"><img src="icons/instagram.png" alt="Instagram"> <a href="https://www.instagram.com/gvmpard" target="_blank">@gvmpard</a></p>
+        <p class="contact-link"><img src="icons/telegram.png" alt="Telegram"> <a href="https://t.me/aywaskabeats" target="_blank">@aywaskabeats</a></p>
+        <p class="contact-link"><img src="icons/email.png" alt="Email"> <a href="mailto:beatsmolotov@gmail.com">beatsmolotov@gmail.com</a></p>
+        <p class="muted">Payment: USDT (crypto) / alternatives by request</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Aywaska Beats</span>
+      <span>The site was created for informational purposes.</span>
+    </footer>
+  </div>
+</body>
+</html>
